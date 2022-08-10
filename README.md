@@ -9,7 +9,7 @@ create and call cross validation for a model.
 ```bash
   pip install -r requirements.txt
 ```
-## Deployment
+## Run
 
 To deploy this project run
 
