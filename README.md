@@ -22,6 +22,10 @@ To deploy this project run
 in main.py file we should import data and create an instance of model.
 then specify the cross validation configuration:
 
+note:
+every parameter start with `cv_` become a parameter for crossvalidation method and it not limited to the below parametrs.
+every parameter start with `split_` become a parameter for train_test_split method and it not limited to the below parametrs.
+
 #### configuration
 
 | Parameter | Type     | Description                |
