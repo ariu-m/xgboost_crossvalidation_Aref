@@ -52,7 +52,6 @@ class CrossValidation:
         :return: cross validation results
         """
         conf = self.conf
-        scoring = conf["scoring"]
         cv_model = getattr(model_selection, conf["cv_model"])
         conf.pop("cv_model")
         split_conf = {k.replace("split_", ""): v for k, v in conf.items() if k.startswith("split_")}
@@ -73,7 +72,7 @@ class CrossValidation:
             X_train,
             y_train,
             cv=cv,
-            scoring=scoring,
+            scoring=conf["scoring"],
             return_train_score=conf["return_train_score"],
             n_jobs=conf["n_jobs"],
         )
