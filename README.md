@@ -10,9 +10,6 @@ create and call cross validation for a model.
   pip install -r requirements.txt
 ```
 ## Run
-
-To deploy this project run
-
 ```bash
   python main.py
 ```
