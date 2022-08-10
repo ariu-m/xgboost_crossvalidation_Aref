@@ -102,9 +102,13 @@ class CrossValidation:
         cv_results = cv_results.rename(
             index={len(cv_results) - 2: "mean", len(cv_results) - 1: "std"}
         )
+        
         train_model_metrics_result = [list(x.values())[0] for x in train_model_metrics_result]
         test_model_metrics_result = [list(x.values())[0] for x in test_model_metrics_result]
-        cv_results.loc[len(cv_results)] = train_model_metrics_result + test_model_metrics_result
+        
+        final = [item for sublist in zip(test_model_metrics_result, train_model_metrics_result) for item in sublist]
+        
+        cv_results.loc[len(cv_results)] = final
         cv_results = cv_results.rename(index={len(cv_results) - 1: "final"})
 
         return cv_results
