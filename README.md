@@ -24,9 +24,9 @@ then specify the cross validation configuration:
 
 note:
 
-every parameter start with `cv_` become a parameter for crossvalidation method and it not limited to the below parametrs.
+every parameter start with `cv_` become a parameter for crossvalidation method and it not limited to the below parameters.
 
-every parameter start with `split_` become a parameter for train_test_split method and it not limited to the below parametrs.
+every parameter start with `split_` become a parameter for train_test_split method and it not limited to the below parameters.
 
 #### configuration
 
